@@ -29,6 +29,7 @@ const SearchBox = () => {
     if (query) {
       router.push(`/search?q=${encodeURIComponent(query)}`);
     }
+    closeSearch();
   };
 
   const handleInputChange = (event) => {
@@ -40,6 +41,7 @@ const SearchBox = () => {
     inputRef.current.value = suggestion;
     setSuggestions([]);
     router.push(`/search?q=${encodeURIComponent(suggestion)}`);
+    closeSearch();
   };
 
   const inputRef = useRef(null);
@@ -76,7 +78,7 @@ const SearchBox = () => {
     <div ref={searchBoxRef}>
       {/** Search Btn */}
       {!searchOpen && (
-        <div className="w-[500px] h-[40px] flex items-center">
+        <div className="min-[740px]:w-[500px] w-[350px] h-[40px] flex items-center ">
           <div
             className="w-full h-full px-3 flex items-center border-[2px] border-border rounded-l-2xl cursor-text"
             onClick={openSearch}

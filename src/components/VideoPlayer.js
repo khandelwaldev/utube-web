@@ -4,7 +4,7 @@ import Plyr from "plyr";
 import Hls from "hls.js";
 import "plyr/dist/plyr.css";
 
-const VideoPlayer = ({ src, thumbnail }) => {
+const VideoPlayer = ({ src, thumbnail, title, uploaderName }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -48,6 +48,35 @@ const VideoPlayer = ({ src, thumbnail }) => {
         });
 
         const player = new Plyr(video, defaultOptions);
+
+        if ("mediaSession" in navigator) {
+          var navMS = navigator.mediaSession;
+          navMS.metadata = new MediaMetadata({
+            title: title,
+            artwork: [
+              {
+                src: thumbnail,
+                sizes: "128x128 256x256",
+                type: "image/x-icon",
+              },
+            ],
+          });
+          // navMS.setActionHandler('play', function() {
+          //     player.play();
+          // });
+          // navMS.setActionHandler('pause', function() {
+          //     player.pause();
+          // });
+          // navMS.setActionHandler('stop', function() {
+          //     player.stop();
+          // });
+          // navMS.setActionHandler('seekbackward', function() {
+          //     player.rewind(10);
+          // navMS.setActionHandler('seekforward', function() {
+          //     player.forward(10);
+          // });
+          // })
+        }
       });
 
       hls.attachMedia(video);
@@ -74,7 +103,7 @@ const VideoPlayer = ({ src, thumbnail }) => {
       controls
       playsInline
       poster={thumbnail}
-      style={{ width: "100%" }}
+      style={{ width: "100%", objectFit: "cover" }}
     ></video>
   );
 };

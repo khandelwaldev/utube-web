@@ -1,8 +1,8 @@
 import * as React from "react";
-const CompassIcon = ({ szie, color, props }) => (
+const CompassIcon = ({ size, color, props }) => (
   <svg
-    width={szie}
-    height={szie}
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
