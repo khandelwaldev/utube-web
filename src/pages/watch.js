@@ -157,7 +157,7 @@ const Watch = () => {
           } on UTube for free without any disturbing ADs`,
           images: [
             {
-              url: "/og-image.png",
+              url: videoData.thumbnailUrl,
               width: 800,
               height: 420,
               alt: "UTube",
