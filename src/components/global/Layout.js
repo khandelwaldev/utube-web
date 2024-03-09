@@ -156,7 +156,7 @@ const Layout = ({ children }) => {
             </button>
             <button>
               <img
-                src={`https:github.com/khandelwaldev.png`}
+                src={`https://github.com/khandelwaldev.png`}
                 width={35}
                 height={35}
                 className="rounded-full"
@@ -300,7 +300,7 @@ const Layout = ({ children }) => {
 
       {/** Main Content */}
       <main
-        className="p-5 mt-[55px] md:ml-[75px]"
+        className="p-5 mb-[60px] md:mb-0 mt-[55px] md:ml-[75px]"
         style={{ transition: "0.3s all" }}
       >
         <div
