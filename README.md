@@ -14,3 +14,6 @@
 <li>Logo from <a href="https://www.svgrepo.com">svgrepo.com</a></li>
 <li>Player :- <a href="https://plyr.io">plyr.io</a></li>
 </ul>
+
+
+### Let's get connected on instagram: <a href="https://instagram.com/i.slyro">@i.slyro<a>.
