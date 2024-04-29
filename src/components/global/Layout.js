@@ -154,14 +154,14 @@ const Layout = ({ children }) => {
             >
               <SearchIcon size={25} color={"#fff"} />
             </button>
-            <button>
+            <Link href={`https://slyro.vercel.app`} target="_blank">
               <img
                 src={`https://github.com/khandelwaldev.png`}
                 width={35}
                 height={35}
                 className="rounded-full"
               />
-            </button>
+            </Link>
           </div>
         </div>
       </header>
